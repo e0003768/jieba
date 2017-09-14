@@ -381,6 +381,8 @@ class Tokenizer(object):
                     line = line.decode('utf-8').lstrip('\ufeff')
                 except UnicodeDecodeError:
                     raise ValueError('dictionary file %s must be utf-8' % f_name)
+            if line[0] = '#':
+                continue
             if not line:
                 continue
             # match won't be None because there's at least one character
